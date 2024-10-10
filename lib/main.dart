@@ -1,5 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_final_exam/Screens/home_screen.dart';
+import 'package:flutter_final_exam/Screens/log_in_screen.dart';
+import 'package:flutter_final_exam/Utils/auth_gate.dart';
 import 'package:get/get.dart';
 
 import 'firebase_options.dart';
@@ -17,7 +20,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp();
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: AuthGate(),
+    );
   }
 }
-
